@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
     // These classes are intentionally empty for the purpose of this example. They are simply marker classes for the purpose of demonstration, contain no properties, and serve no other purpose.
@@ -9,22 +10,30 @@ using System.Threading.Tasks;
 
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            var watch = Stopwatch.StartNew(); //starts timer
             Tea cup = PourTea();
             Console.WriteLine("Tea is ready");
 
-            Poha poha = MakePoha();
+            Task<Poha> pohaTask = MakePohaAsync();
+            Task<Bhakhri> bhakhriTask = MakeBhakhriAsync(2);
+            Task<Toast> toastTask = MakeToastAsync(2);
+
+            Poha poha =await pohaTask;
+
             Console.WriteLine("Poha is ready");
 
-            Bhakhri bhakhri = MakeBhakhri(2);
+            Bhakhri bhakhri =await bhakhriTask;
             Console.WriteLine("Bhakhri is ready");
 
-            Toast toast = ToastBread(2);
+            Toast toast =await toastTask;
             ApplyButter(toast);
             ApplyJam(toast);
             Console.WriteLine("toast is ready");
             Console.WriteLine("Breakfast is ready!");
+            watch.Stop();
+        Console.WriteLine("Time took to make breakfast: "+watch.Elapsed);
         }
     
         private static void ApplyJam(Toast toast) =>
@@ -33,24 +42,26 @@ using System.Threading.Tasks;
         private static void ApplyButter(Toast toast) =>
             Console.WriteLine("Putting butter on the toast");
 
-        private static Toast ToastBread(int slices)
+        private static async Task<Toast> MakeToastAsync(int slices)
         {
             for (int slice = 0; slice < slices; slice++)
             {
                 Console.WriteLine("Putting a slice of bread in the toaster");
             }
             Console.WriteLine("Start toasting...");
-            Task.Delay(3000).Wait();
+            await Task.Delay(3000);    
+            //Task.Delay(3000).Wait();
             Console.WriteLine("Remove toast from toaster");
 
             return new Toast();
         }
 
-        private static Bhakhri MakeBhakhri(int total)
+        private static async Task<Bhakhri> MakeBhakhriAsync(int total)
         {
             Console.WriteLine($"create flour for {total} bhakhari");
-            Task.Delay(3000).Wait();
-            for (int bhakhri = 0; bhakhri < total; bhakhri++)
+        //Task.Delay(3000).Wait();
+        await Task.Delay(3000);
+            for (int bhakhri = 1; bhakhri <= total; bhakhri++)
             {
                 Task.Delay(3000).Wait();
                 Console.WriteLine("Bhakhari-"+bhakhri+" created");
@@ -61,13 +72,15 @@ using System.Threading.Tasks;
             return new Bhakhri();
         }
 
-        private static Poha MakePoha()
+        private static async Task<Poha> MakePohaAsync()
         {
             Console.WriteLine("Adding water to poha");
-            Task.Delay(3000).Wait();
-            Console.WriteLine($"Poha vagharvya ");
-            Task.Delay(3000).Wait();
-            Console.WriteLine("Put Poha on plate");
+        //Task.Delay(3000).Wait();
+        await Task.Delay(3000);
+
+        Console.WriteLine($"Poha vagharvya ");
+        await Task.Delay(3000);
+        Console.WriteLine("Put Poha on plate");
 
             return new Poha();
         }
