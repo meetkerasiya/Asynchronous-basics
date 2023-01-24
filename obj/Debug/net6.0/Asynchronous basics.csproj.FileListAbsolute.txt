@@ -1,0 +1,15 @@
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\bin\Debug\net6.0\Asynchronous basics.exe
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\bin\Debug\net6.0\Asynchronous basics.deps.json
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\bin\Debug\net6.0\Asynchronous basics.runtimeconfig.json
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\bin\Debug\net6.0\Asynchronous basics.dll
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\bin\Debug\net6.0\Asynchronous basics.pdb
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.csproj.AssemblyReference.cache
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.AssemblyInfoInputs.cache
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.AssemblyInfo.cs
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.csproj.CoreCompileInputs.cache
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.dll
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\refint\Asynchronous basics.dll
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.pdb
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\Asynchronous basics.genruntimeconfig.cache
+C:\Users\Meet  Kerasiya\source\repos\Asynchronous basics\Asynchronous basics\obj\Debug\net6.0\ref\Asynchronous basics.dll
